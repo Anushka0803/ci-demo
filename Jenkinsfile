@@ -5,7 +5,7 @@ pipeline {
             steps { checkout scm }
         }
         stage('Build') {
-            steps { bat 'npm ci' }
+            steps { bat 'npm install' }
         }
         stage('Test') {
             steps { bat 'npm test' }
